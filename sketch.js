@@ -5,7 +5,7 @@ let pg0,pg1,pg2,pg3,pg4,pg5,pg6;
 
 let particles = [];
 let a;
-let page0str =[];
+let page0str,page1str = [];
 
 let scroll = false;
 let timer = 0;
@@ -13,6 +13,7 @@ let timer = 0;
 function preload(){
   inconsolata_Reg = loadFont('/fonts/Inconsolata-Regular.ttf');
   page0str = loadStrings('/text/page0.txt');
+  page1str = loadStrings('/text/page1.txt');
   print(page0str);
 }
 
@@ -32,30 +33,33 @@ function setup() {
 }
 
 function draw() {
-
+//background(0);
   if(page===0){
     titlepage();
     if(scroll){
-      pg1.pg.background(0);
-      pg1.display();
+      pageOne();
 
       pg0.y += scrollOut(pg0,timer,0,-height,600)
       pg1.y += scrollOut(pg1,timer,0,-height,600)
       timer++;
 
-    if(pg1.y === 0){
+    if(pg1.y <= 0){
       page = 1;
-      print(scroll);
+    //  print(scroll);
       scroll = false;
-      print(scroll);
-    }
-    }
-  }
-  if(page===1){
+   //   print(scroll);
+      }
+     }
+    } 
+if(page===1){
+ // pg1.pg.background(255);
+ //square(width/2,height/2,50)
     pageOne();
+
   }
 
-}
+    }
+
 
 //abc on grey background with description text
 function titlepage(){
@@ -106,8 +110,12 @@ function titlepage(){
 //introduction
 function pageOne(){
   pg1.pg.background(220);
+    //first line is where are you from
+    pg1.pg.fill(0);
+    pg1.pg.textSize(40);
+    pg1.pg.text(page1str[0], pg1.pg.width/2, pg1.pg.height/10);
     pg1.display();
-    
+
 }
 
 function windowResized() {
@@ -146,9 +154,6 @@ function scrollOut(pageNo,t,b,c,d){
 	// 	return c * Math.sin(t/d * (Math.PI/2)) + b;
 	// },
   
-}
-function scrollIn(pageNo,t,b,c,d){ //the only diff would be the pageNo and c
-
 }
 
 class Page{
