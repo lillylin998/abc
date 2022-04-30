@@ -1,4 +1,4 @@
-let page = 0;
+let page = 1;
 let inconsolata_Reg, inconsolata_SE_ExtraLight, inconsolata_SE_Light, inconsolata_Light, inconsolata_ExtraLight;
 
 let pg0,pg1,pg2,pg3,pg4,pg5,pg6;
@@ -12,6 +12,7 @@ let timer = 0;
 
 function preload(){
   inconsolata_Reg = loadFont('/fonts/Inconsolata-Regular.ttf');
+  inconsolata_Light = loadFont('/fonts/Inconsolata-Light.ttf');
   page0str = loadStrings('/text/page0.txt');
   page1str = loadStrings('/text/page1.txt');
   print(page0str);
@@ -19,10 +20,10 @@ function preload(){
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  //pg0 = createGraphics(width,height);
-  //pg1 = createGraphics(width,height);
+
   pg0 = new Page(0);
-  pg1 = new Page(height);
+  //currently working on page 1 ONLY, change to height later
+  pg1 = new Page(0);
   rectMode(CENTER)
   a = new Letter('A',width/2-300,height-100,width/4);
   b = new Letter('B', width/2-100,height-150,width/4 );
@@ -110,10 +111,48 @@ function titlepage(){
 //introduction
 function pageOne(){
   pg1.pg.background(220);
-    //first line is where are you from
+    //first 5 lines is where are you from conversation 
+    let textH = height/5;
+    let textW_other = width/3;
+    let textW_me = width/1.5;
+    pg1.pg.textWrap(WORD);
     pg1.pg.fill(0);
-    pg1.pg.textSize(40);
-    pg1.pg.text(page1str[0], pg1.pg.width/2, pg1.pg.height/10);
+    pg1.pg.textFont(inconsolata_Reg);
+    pg1.pg.textSize(30);
+    pg1.pg.text(page1str[0], textW_other, textH,400);
+    pg1.pg.text(page1str[2],textW_other,textH+150,400);
+    pg1.pg.text(page1str[4],textW_other, textH+325,400);
+    pg1.pg.textAlign(RIGHT);
+    pg1.pg.text(page1str[1],textW_me, textH+75);
+    pg1.pg.text(page1str[3],textW_me, textH+250);
+    pg1.pg.text(page1str[5],textW_me, textH+425);
+
+    //next few lines are the start of the actual essay
+    //pg1.pg.textFont(inconsolata_Light)
+    pg1.pg.textAlign(LEFT);
+    pg1.pg.textSize(16);
+    let paraW_Left = width/18;
+    let paraW_Right = width/1.42;
+    let paraH = height/7;
+    let parbreak = height/30;
+
+    let hh = textHeight(page1str[6],width/8);
+    hh+= paraH;
+    hh+=parbreak;
+    pg1.pg.text(page1str[6], paraW_Left, paraH, width/4);
+    pg1.pg.text(page1str[7], paraW_Left, hh,width/4);
+    hh += textHeight(page1str[7],width/8);
+    hh+= parbreak;
+    pg1.pg.text(page1str[8], paraW_Left, hh,width/4);
+    hh += textHeight(page1str[8],width/8);
+    hh+= parbreak;
+    pg1.pg.text(page1str[9], paraW_Left, hh,width/4);
+    hh = paraH;
+    pg1.pg.text(page1str[10],paraW_Right,hh,width/4)
+    hh += textHeight(page1str[10],width/8);
+    hh+= parbreak;
+    pg1.pg.text(page1str[11],paraW_Right,hh,width/4)
+
     pg1.display();
 
 }
