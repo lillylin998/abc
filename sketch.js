@@ -1,28 +1,19 @@
-let page = 0;
-let inconsolata_Reg, inconsolata_SE_ExtraLight, inconsolata_SE_Light, inconsolata_Light, inconsolata_ExtraLight;
 
-let pg0,pg1,pg2,pg3,pg4,pg5,pg6;
-
-let particles = [];
-let a;
-let page0str,page1str = [];
-
-let scroll = false;
-let timer = 0;
 
 function preload(){
   inconsolata_Reg = loadFont('/fonts/Inconsolata-Regular.ttf');
+  inconsolata_Light = loadFont('/fonts/Inconsolata-Light.ttf');
   page0str = loadStrings('/text/page0.txt');
   page1str = loadStrings('/text/page1.txt');
-  print(page0str);
+  
 }
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  //pg0 = createGraphics(width,height);
-  //pg1 = createGraphics(width,height);
+
   pg0 = new Page(0);
-  pg1 = new Page(height);
+  //currently working on page 1 ONLY, change to height later
+  pg1 = new Page(0);
   rectMode(CENTER)
   a = new Letter('A',width/2-300,height-100,width/4);
   b = new Letter('B', width/2-100,height-150,width/4 );
@@ -45,78 +36,16 @@ function draw() {
 
     if(pg1.y <= 0){
       page = 1;
-    //  print(scroll);
       scroll = false;
-   //   print(scroll);
       }
      }
     } 
 if(page===1){
- // pg1.pg.background(255);
- //square(width/2,height/2,50)
     pageOne();
-
   }
 
     }
 
-
-//abc on grey background with description text
-function titlepage(){
-  pg0.pg.background(220);
-  a.display();
-  a.vertFloat();
-  b.display();
-  b.vertFloat();
-  c.display();
-  c.vertFloat();
-  for(let i in particles){
-    particles[i].display();
-  }
-  pg0.pg.push();
-  //rectMode(CORNER);
-  let combinedh = 0;
-  let texty = pg0.y+120;
-  pg0.pg.textWrap(WORD);
-  pg0.pg.rectMode(CENTER);
-  pg0.pg.textAlign(CENTER);
-  pg0.pg.textSize(width/70);
-  pg0.pg.textFont(inconsolata_Reg);
-  pg0.pg.fill(0);
-  pg0.pg.text(page0str[0],width/2,texty,740);
-  // let paraBreak = 20;
-  // let texth=textHeight(page0str[0],400);
-  // texty+=texth;
-  // texty+=paraBreak;
-  // text(page0str[1],50,texty,300)
-  // texth = textHeight(page0str[1],250);
-  // texty+=texth;
-  // texty+=paraBreak*2;
-  // text(page0str[2],50,texty,200);
-
-  // for(let i in page0str){
-
-  //  let h = textHeight(page0str[i],400);
-   
-  //   print(h);
-  //   text(page0str[i],50,100+combinedh,450); 
-  //   combinedh += h;
-  // }
-  pg0.pg.pop();
-  //image(pg0,0,0);
-  pg0.display();
-}
-
-//introduction
-function pageOne(){
-  pg1.pg.background(220);
-    //first line is where are you from
-    pg1.pg.fill(0);
-    pg1.pg.textSize(40);
-    pg1.pg.text(page1str[0], pg1.pg.width/2, pg1.pg.height/10);
-    pg1.display();
-
-}
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
@@ -220,6 +149,7 @@ class Particle{
   }
 }
 
+//code adapted from https://gist.github.com/studioijeoma/942ced6a9c24a4739199
 function textHeight(text, maxWidth) {
   var words = text.split(' ');
   var line = ' ';
