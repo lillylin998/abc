@@ -5,6 +5,7 @@ function preload(){
   inconsolata_Light = loadFont('/fonts/Inconsolata-Light.ttf');
   page0str = loadStrings('/text/page0.txt');
   page1str = loadStrings('/text/page1.txt');
+  page2str = loadStrings('/text/page2.txt');
   
 }
 
@@ -12,8 +13,9 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
 
   pg0 = new Page(0);
-  //currently working on page 1 ONLY, change to height later
   pg1 = new Page(0);
+   //currently working on page 2 ONLY, change to height later
+  pg2 = new Page(0);
   rectMode(CENTER)
   a = new Letter('A',width/2-300,height-100,width/4);
   b = new Letter('B', width/2-100,height-150,width/4 );
@@ -43,6 +45,10 @@ function draw() {
 if(page===1){
     pageOne();
   }
+
+if(page===2){
+   pageTwo();
+}
 
     }
 
