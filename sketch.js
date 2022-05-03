@@ -12,8 +12,7 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
 
   pg0 = new Page(0);
-  //currently working on page 1 ONLY, change to height later
-  pg1 = new Page(0);
+  pg1 = new Page(height);
   rectMode(CENTER)
   a = new Letter('A',width/4,height/1.3,width/4);
   b = new Letter('B', width/2.5,height/1.4,width/4 );
@@ -72,7 +71,7 @@ function scrollOut(pageNo,t,b,c,d){
   //pageNext = pageNo+1;
   
   
-   return -c * cos(t/d*(PI/2)) + c + b;
+  return -c * cos(t/d*(PI/2)) + c + b;
   //return c*t/d +b;
 
 

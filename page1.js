@@ -3,6 +3,7 @@
 function pageOne(){
     pg1.pg.background(220);
       //first 5 lines is where are you from conversation 
+      if(pg1.y<=0){
       let textH = height/5;
       let textW_other = width/3;
       let textW_me = width/1.5;
@@ -43,6 +44,7 @@ function pageOne(){
       hh += textHeight(page1str[10],width/8);
       hh+= parbreak;
       pg1.pg.text(page1str[11],paraW_Right,hh,width/4)
+      }
   
       pg1.display();
   
