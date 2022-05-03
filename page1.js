@@ -42,8 +42,8 @@ function pageOne(){
       hh = paraH;
       pg1.pg.text(page1str[10],paraW_Right,hh,width/4)
       hh += textHeight(page1str[10],width/8);
-      hh+= parbreak;
-      pg1.pg.text(page1str[11],paraW_Right,hh,width/4)
+    //   hh+= parbreak;
+    //   pg1.pg.text(page1str[11],paraW_Right,hh,width/4)
       }
   
       pg1.display();
