@@ -10,7 +10,7 @@ function preload(){
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-
+  frameRate(30);
   pg0 = new Page(0);
   //currently working on page 1 ONLY, change to height later
   pg1 = new Page(0);

@@ -5,3 +5,12 @@ html, body {
 canvas {
   display: block;
 }
+
+@font-face {
+  font-family: inconsolata-reg;
+  src: url(/fonts/Inconsolata-Regular.ttf)
+}
+@font-face {
+  font-family: inconsolata-light;
+  src: url(/fonts/Inconsolata-Light.ttf)
+}

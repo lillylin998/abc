@@ -33,7 +33,12 @@ function pageOne(){
       let hh = textHeight(page1str[6],width/8);
       hh+= paraH;
       hh+=parbreak;
-      pg1.pg.text(page1str[6], paraW_Left, paraH, width/4);
+      let testp = createElement('p',page1str[6]);
+      testp.position(paraW_Left,paraH);
+      testp.size(width/4.2);
+      testp.style('font-family','inconsolata-light');
+      testp.style('text-align','justify')
+      //pg1.pg.text(page1str[6], paraW_Left, paraH, width/4);
       pg1.pg.text(page1str[7], paraW_Left, hh,width/4);
       hh += textHeight(page1str[7],width/8);
       hh+= parbreak;
