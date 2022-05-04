@@ -4,8 +4,10 @@ function pageOne(){
     pg1.pg.background(220);
       //first 5 lines is where are you from conversation 
       let textH = height/5;
-      let textW_other = width/3;
-      let textW_me = width/1.5;
+      //let textW_other = width/3;
+      let textW_other = width/18;
+      //let textW_me = width/1.5;
+      let textW_me = width/3;
       pg1.pg.textWrap(WORD);
       pg1.pg.fill(0);
       pg1.pg.textFont(inconsolata_Reg);
@@ -22,7 +24,8 @@ function pageOne(){
       //pg1.pg.textFont(inconsolata_Light)
       pg1.pg.textAlign(LEFT);
       pg1.pg.textSize(16);
-      let paraW_Left = width/18;
+      //let paraW_Left = width/18;
+      let paraW_Left = width/2.3;
       let paraW_Right = width/1.42;
       let paraH = height/7;
       let parbreak = height/30;
@@ -41,8 +44,8 @@ function pageOne(){
       hh = paraH;
       pg1.pg.text(page1str[10],paraW_Right,hh,width/4)
       hh += textHeight(page1str[10],width/8);
-      hh+= parbreak;
-      pg1.pg.text(page1str[11],paraW_Right,hh,width/4)
+    //   hh+= parbreak;
+    //   pg1.pg.text(page1str[11],paraW_Right,hh,width/4)
   
       pg1.display();
   
