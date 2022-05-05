@@ -21,6 +21,12 @@ function setup() {
   for(let i=0; i<10; i++){
   particles.push(new Particle(random(50,width-50),random(height,height+100),random(10,40)));
   }
+  testp = createElement('p',page1str[6]);
+  testp.hide();
+  for(let i in page1str){
+    page1p.push(createElement('p',page1str[i]));
+    page1p[i].hide();
+  }
 }
 
 function draw() {
