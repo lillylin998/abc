@@ -13,7 +13,7 @@ function titlepage(){
     pg0.pg.push();
     //rectMode(CORNER);
     let combinedh = 0;
-    let texty = pg0.y+120;
+    let texty = pg0.y+100;
     pg0.pg.textWrap(WORD);
     pg0.pg.rectMode(CENTER);
     pg0.pg.textAlign(CENTER);
@@ -21,6 +21,9 @@ function titlepage(){
     pg0.pg.textFont(inconsolata_Reg);
     pg0.pg.fill(0);
     pg0.pg.text(page0str[0],width/2,texty,740);
+    pg0.pg.textSize(width/80);
+    pg0.pg.text(page0str[1],width/2,height/1.2,width/2);
+    pg0.pg.text(page0str[2],width/2,height/1.1,width/2);
     // let paraBreak = 20;
     // let texth=textHeight(page0str[0],400);
     // texty+=texth;
