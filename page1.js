@@ -52,6 +52,8 @@ function pageOne(){
           }
         }
       }
+
+      loadText();
       //pg1.pg.text(page1str[6], paraW_Left, paraH, width/4);
     //   pg1.pg.text(page1str[7], paraW_Left, hh,width/4);
     //   hh += textHeight(page1str[7],width/8);
@@ -67,5 +69,18 @@ function pageOne(){
     //   pg1.pg.text(page1str[11],paraW_Right,hh,width/4)
   
       pg1.display();
+      for(let i in page1popups){
+        page1popups[i].el.onmouseover = function(){
+        page1popups[i].switch();
+    }
+    page1popups[i].el.onmouseout = function(){
+        page1popups[i].switch();
+    }
+    page1popups[i].display();
+
+    }
+   
+    // strokeWeight(5);
+    // point(page1popups[0].x,page1popups[0].y);
   
   }

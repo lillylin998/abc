@@ -1,0 +1,69 @@
+{
+    "popupdata" :[ 
+        {
+        "txt": ["All Asians look the same, I can't tell you guys apart!",
+        "Can you even see? [ because your eyes are so small ]",
+        "Does your family eat dogs?",
+        "[ pulls eyes back ] Chinese, Japanese, dirty knees, look at these!",
+         "Can you say something in Asian for me?",
+        "[ horrific mispronunciation of a Chinese word or phrase, usually ni hao ('hello') ]",
+        "Haha what do you eat at home? Noodles and rice?",
+        "Bet you're good at math 'cause you're Asian",
+        "Do you know kung fu?",
+        "[ mocking a Chinese accent ]",
+        "[ immediately upon seeing me ] Ni hao!/Konnichiwa!",
+        "...and more!"],
+        "img": null,
+        "offsetx": 0,
+        "offsety": 0
+    },
+    {
+        "txt": ["The 'oriental marts', aka the only places my mom could source Asian groceries"],
+        "img": null,
+        "offsetx": 0,
+        "offsety": 0
+    },
+    {
+        "txt": ["Private lessons from one of the very few family friends in the area - but I still communicated with them in English"],
+        "img": null,
+        "offsetx": 0,
+        "offsety": 0
+    },
+    {
+        "txt": ["We only went some years, and again, I don't remember much.",
+            "Who was there? Why did we only go some years? Why did we stop going? Where was it? How many people where there? I only remember seeing lion dancing there for the first time and thinking that was pretty cool."],
+        "img": null,
+        "offsetx": 0,
+        "offsety": 0
+    },
+   { 
+        "txt": ["Chinese schools are exactly what they sound like - schools established outside of China to teach Chinese language and culture to school-aged children. These schools are separate from your regular Monday to Friday schooling, meaning we would attend one day a week on the weekend.",
+        "Ironically, sticking to attending probably would have helped me with my Chinese language skills and therefore possibly would have relieved me of some of the cultural anxiety I experienced later in my life. Also, funnily enough, essentially everybody I've talked to in my life who also went to Chinese school recalls greatly disliking it."],
+        "img": null,
+        "offsetx": 0,
+        "offsety": 0
+    },
+    {
+        "txt": ["The qipao/cheongsam is a tight-fitting, usually longer style of dress. It was the closest thing I had when I was growing up that I could reference as a 'traditional' cultural Chinese garment - although it was actually only inspired by traditional garments. It was actually created in the 1920's, popularized by socialite women in Shanghai.",
+            "It's a beautiful style of dress, how could I have ever hated it? My qipao, like most of the other things I mentioned I hated about myself at the time, simply just brought too much attention to the fact that I was so culturally different from my peers. I often felt that I'd attract stares (not in a good way), and I always felt strange and out of place when wearing it."],
+        "img": null,
+        "offsetx": 0,
+        "offsety": 0
+    },
+    {
+        "txt": ["The tangzhuang or Tang suit is a style jacket modeled after jackets that were worn by Manchu horsemen. Despite the name, they don't originate from the Tang Dynasty. It is most often seen in menswear, but is a unisex piece.",
+        "The one that I wore as a kid was light blue with a delicate floral pattern and came with matching pants. I didn't like wearing it as a kid for the same reason that I didn't like wearing my qipao, but now I have both styles of clothing in my closet (in adult size) that I truly cherish."],
+        "img": null,
+        "offsetx": 0,
+        "offsety": 0
+    },
+   {
+        "txt": ["My parents gave me an English name (Lilly) at birth assumedly because they knew they would raise me in the U.S. and therefore I would assimilate easier with an English name. So my middle name is my 'real' Chinese name.",
+            "To clarify, of course I don't expect non-Chinese speakers to immediately get the pronunciation, and I'm always happy to say it a few times for reference. The reason I hated doing it so much was because people often continued mispronouncing it,  purposefully mispronounced it, or followed up immediately with something like, 'That's so hard, it's such a weird name'. I've also been referred to by my peers as Lilly 'whatever your middle name is' Lin. Because my middle name IS my Chinese name, yeah those comments definitely hurt."],
+        "img": null,
+        "offsetx": 0,
+        "offsety": 0
+    }
+    ]
+
+}

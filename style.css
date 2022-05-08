@@ -6,6 +6,9 @@ canvas {
   display: block;
 }
 
+span {
+  color:red;
+}
 @font-face {
   font-family: inconsolata-reg;
   src: url(/fonts/Inconsolata-Regular.ttf)
@@ -13,4 +16,9 @@ canvas {
 @font-face {
   font-family: inconsolata-light;
   src: url(/fonts/Inconsolata-Light.ttf)
+}
+
+@font-face {
+  font-family: librebaskerville-italic;
+  src: url(/fonts/LibreBaskerville-Italic.ttf)
 }

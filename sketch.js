@@ -3,8 +3,12 @@
 function preload(){
   inconsolata_Reg = loadFont('/fonts/Inconsolata-Regular.ttf');
   inconsolata_Light = loadFont('/fonts/Inconsolata-Light.ttf');
+  libreBaskerville_italic = loadFont('/fonts/LibreBaskerville-Italic.ttf')
+  nunito_Light = loadFont('/fonts/Nunito-Light.ttf');
+  nunito_LightItalic = loadFont('/fonts/Nunito-LightItalic.ttf');
   page0str = loadStrings('/text/page0.txt');
   page1str = loadStrings('/text/page1.txt');
+  pg1_popuptext = loadJSON('/text/page1_popups.json');
   
 }
 
@@ -22,9 +26,13 @@ function setup() {
   particles.push(new Particle(random(50,width-50),random(height,height+100),random(10,40)));
   }
 
+  // bigDiv = createElement('span');
+  // bigDiv.style('float','left');
   for(let i in page1str){
     page1p.push(createElement('p',page1str[i]));
     page1p[i].hide();
+    page1p[i].style('display','flex')
+   // page1p[i].parent(bigDiv);
   }
   print(page1p);
 }
