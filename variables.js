@@ -1,4 +1,4 @@
-let page = 0;
+let page = 1;
 let inconsolata_Reg, inconsolata_SE_ExtraLight, inconsolata_SE_Light, inconsolata_Light, inconsolata_ExtraLight;
 let libreBaskerville_italic;
 let nunito_Light, nunito_LightItalic;
