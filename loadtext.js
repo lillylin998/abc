@@ -5,7 +5,7 @@ function loadText(){ //pull all div elements and what page they're assigned to?
         //make a pop up object for all of these 
         for(let i in tags){
             let index = pg1_popuptext.popupdata[i];
-           page1popups.push(new PopUp(index.txt,tags[i].id,index.img,index.offsetx,index.offsety )); 
+           page1popups.push(new PopUp(index.txt,tags[i].id,index.img,index.offsetx,index.offsety,index.width,index.height )); 
            //set pop up x and y 
            page1popups[i].set();
 
@@ -19,7 +19,7 @@ function loadText(){ //pull all div elements and what page they're assigned to?
 
 
 class PopUp{
-    constructor(text,id,img,offsetx,offsety){
+    constructor(text,id,img,offsetx,offsety,w,h){
         this.id = id;
         this.txt = text;
         this.img = img;
@@ -27,9 +27,10 @@ class PopUp{
         this.offsety = offsety;
         this.x;
         this.y;
-        this.w;
-        this.h;
+        this.w = w;
+        this.h = h;
         this.el;
+        this.popup;
         this.hover = false;
     }
 
@@ -40,10 +41,21 @@ class PopUp{
         this.el = el;
         this.x = rect.x;
         this.y = rect.y;
-        this.w = rect.width;
-        this.h = rect.height;
-
+        //this.w = rect.width;
+        // this.h = rect.height;
         //print(test);
+        let txt_temp;
+        this.popup = createDiv();
+        this.popup.id('pop');
+        for(let i in this.txt){
+            txt_temp = createElement('p',this.txt[i]);
+            txt_temp.id('mini_p')
+            txt_temp.parent(this.popup);
+        }
+        this.popup.hide();
+        this.popup.style('background','white');
+        this.popup.position(this.x+this.offsetx,this.y+this.offsety); //this is where you would add offset x and y
+        this.popup.size(this.w,this.h); //may need to pass in width and height
         
     }
 
@@ -54,13 +66,16 @@ class PopUp{
        if(this.img){//only if this note has an image
             print('hello')
         }
-          textFont(nunito_Light);
-        //   for(let i in this.txt){
-        //     text(this.txt[i],this.x+this.offsetx,this.y+this.offsety,200);
-        //   }
-        text(this.txt[0],this.x+this.offsetx,this.y+this.offsety,200);
-         
-         // rect(this.x,this.y,this.w,this.h)
+        this.popup.show();
+        pg1.pg.push();
+        pg1.pg.stroke(0,0,255);
+        pg1.pg.line(this.x+this.offsetx,this.y+this.offsety,mouseX,mouseY);
+        pg1.pg.pop();
+        print('x ' + mouseX);
+        print('y ' +mouseY);
+        } else {
+
+        this.popup.hide();
         }
     }
 

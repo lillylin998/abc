@@ -4,11 +4,28 @@ html, body,p {
 }
 canvas {
   display: block;
+  position: absolute;
 }
 
-span {
-  color:red;
+span { 
+  color:blue;
+  
 }
+span:hover {
+ font-weight: 900;
+ background: white;
+}
+
+#pop {
+  font-family: librebaskerville-reg;
+  font-size: 12px;
+  text-align: center;
+}
+
+#mini_p {
+  margin: 5px;
+}
+
 @font-face {
   font-family: inconsolata-reg;
   src: url(/fonts/Inconsolata-Regular.ttf)
@@ -19,6 +36,21 @@ span {
 }
 
 @font-face {
+  font-family: librebaskerville-reg;
+  src: url(/fonts/LibreBaskerville-Regular.ttf)
+}
+
+@font-face {
   font-family: librebaskerville-italic;
   src: url(/fonts/LibreBaskerville-Italic.ttf)
+}
+
+@font-face {
+  font-family: nunito-light;
+  src: url(/fonts/Nunito-Light.ttf)
+}
+
+@font-face {
+  font-family: nunito-light-italic;
+  src: url(/fonts/Nunito-LightItalic.ttf)
 }

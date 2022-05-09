@@ -43,6 +43,7 @@ function pageOne(){
           page1p[i].style('font-family','inconsolata-reg');
           page1p[i].style('text-align','justify')
           page1p[i].style('line-height',1.2);
+         // page1p[i].style('z-index',0);
           //hh+=textHeight(page1str[i],width/10);
           hh+=page1p[i].height;
           hh+=parbreak;
@@ -70,9 +71,8 @@ function pageOne(){
     //   hh += textHeight(page1str[10],width/8);
     //   hh+= parbreak;
     //   pg1.pg.text(page1str[11],paraW_Right,hh,width/4)
-  
-      pg1.display();
-      for(let i in page1popups){
+
+   for(let i in page1popups){
         page1popups[i].el.onmouseover = function(){
         page1popups[i].switch();
     }
@@ -82,6 +82,12 @@ function pageOne(){
     page1popups[i].display();
 
     }
+     pg1.display();
+   
+   
+    //pg1a.rect(0,0,height/2,50,50);
+    // pg1a.background(255);
+    // image(pg1a,width/2,height/2);
    
     // strokeWeight(5);
     // point(page1popups[0].x,page1popups[0].y);

@@ -19,9 +19,9 @@ function setup() {
   //currently working on page 1 ONLY, change to height later
   pg1 = new Page(0);
   rectMode(CENTER)
-  a = new Letter('A',width/2-300,height-100,width/4);
-  b = new Letter('B', width/2-100,height-150,width/4 );
-  c = new Letter('C', width/2+100, height-75, width/4)
+  a = new Letter('A',width/2-300,height-200,width/4);
+  b = new Letter('B', width/2-100,height-250,width/4 );
+  c = new Letter('C', width/2+100, height-150, width/4)
   for(let i=0; i<10; i++){
   particles.push(new Particle(random(50,width-50),random(height,height+100),random(10,40)));
   }
