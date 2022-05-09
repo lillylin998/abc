@@ -1,7 +1,8 @@
 
 
 function preload(){
-  inconsolata_Reg = loadFont('abc/fonts/Inconsolata-Regular.ttf');
+  //need to change font paths to add abc/ before final push
+  inconsolata_Reg = loadFont('/fonts/Inconsolata-Regular.ttf');
   inconsolata_Light = loadFont('/fonts/Inconsolata-Light.ttf');
   libreBaskerville_italic = loadFont('/fonts/LibreBaskerville-Italic.ttf')
   nunito_Light = loadFont('/fonts/Nunito-Light.ttf');
