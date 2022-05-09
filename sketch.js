@@ -1,7 +1,7 @@
 
 
 function preload(){
-  inconsolata_Reg = loadFont('/fonts/Inconsolata-Regular.ttf');
+  inconsolata_Reg = loadFont('./fonts/Inconsolata-Regular.ttf');
   inconsolata_Light = loadFont('/fonts/Inconsolata-Light.ttf');
   libreBaskerville_italic = loadFont('/fonts/LibreBaskerville-Italic.ttf')
   nunito_Light = loadFont('/fonts/Nunito-Light.ttf');
