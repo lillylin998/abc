@@ -1,4 +1,5 @@
 
+let delta;
 function preload(){
   //need to change font paths to add abc/ before final push
   inconsolata_Reg = loadFont('/fonts/Inconsolata-Regular.ttf');
@@ -25,7 +26,7 @@ function preload(){
 }
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(windowWidth, windowHeight*8);
   frameRate(30);
 
   rectMode(CENTER)
@@ -33,72 +34,107 @@ function setup() {
   var y = 0;
   for(let i =0; i<8; i++){
     pgy.push(y);
-    y+=height;
+    y+=windowHeight;
   }
 
-  a = new Letter('A',width/2-300,height-200,width/4);
-  b = new Letter('B', width/2-100,height-250,width/4 );
-  c = new Letter('C', width/2+100, height-150, width/4)
+  a = new Letter('A',width/2-300,pgy[0]+600,width/4);
+  b = new Letter('B', width/2-100,pgy[0]+550,width/4 );
+  c = new Letter('C', width/2+100, pgy[0]+520, width/4)
   for(let i=0; i<10; i++){
-  particles.push(new Particle(random(50,width-50),random(height,height+100),random(10,40)));
+  particles.push(new Particle(random(50,width-50),random(pgy[0]+windowHeight,pgy[0]+windowHeight+100),random(10,40)));
   }
 
   for(let i in page1str){
     page1p.push(createElement('p',page1str[i]));
-    page1p[i].hide();
-    page1p[i].style('display','flex')
+   // page1p[i].hide();
+    page1p[i].style('display','block')
   }
   for(let i in page2str){
     page2p.push(createElement('p',page2str[i]));
     page2p[i].hide();
     page2p[i].style('display','flex')
   }
+  for(let i in page3str){
+    page3p.push(createElement('p',page3str[i]));
+    page3p[i].hide();
+    page3p[i].style('display','flex')
+  }
+  for(let i in page4str){
+    page4p.push(createElement('p',page4str[i]));
+    page4p[i].hide();
+    page4p[i].style('display','flex')
+  }
+  loadText();
 }
 
 function draw() {
 background(220);
-  if(page===0){
+titlepage();
+pageOne();
+pageTwo();
+pageThree();
+pageFour();
+//   if(page===0){
     
-    if(scroll){
+//     if(scroll){
      
-//change page 1 y values;
-      pgy[0] += scrollOut(timer,0,-height,600)
-      pgy[1] += scrollOut(timer,0,-height,600)
-      timer++;
+// //change page 1 y values;
+//       pgy[0] += scrollOut(timer,0,-height,600)
+//       pgy[1] += scrollOut(timer,0,-height,600)
+//       timer++;
       
-    if(pgy[1] <= 0){
-      page = 1;
-      scroll = false;
-      } 
-      pageOne();
-     }
-     titlepage();
-    } 
-if(page===1){
- // pg1Loaded = true;
-  if(scroll){
+//     if(pgy[1] <= 0){
+//       page = 1;
+//       scroll = false;
+//       } 
+//       pageOne();
+//      }
+//      titlepage();
+//     } 
+// if(page===1){
+//  // pg1Loaded = true;
+//   if(scroll){
      
-    //change page 1 y values;
-          pgy[1] += scrollOut(timer,0,-height,600)
-          pgy[2] += scrollOut(timer,0,-height,600)
-          timer++;
+//     //change page 1 y values;
+//           pgy[1] += scrollOut(timer,0,-height,600)
+//           pgy[2] += scrollOut(timer,0,-height,600)
+//           timer++;
           
-        if(pgy[2] <= 0){
-         // pgy[2]=0;
-          page = 2;
-          scroll = false;
-         // pg1Loaded = false;
-          } 
-         pageTwo();
-         }
-    pageOne();
-  }
+//         if(pgy[2] <= 0){
+//          // pgy[2]=0;
+//           page = 2;
+//           scroll = false;
+//          // pg1Loaded = false;
+//           } 
+//          pageTwo();
+//          }
+//     pageOne();
+//   }
 
-  if(page===2){
-    pgy[2]=0;
-   // pg2Loaded = true;
-    pageTwo();
-  }
+//   if(page===2){
+//     pgy[2]=0;
+//    // pg2Loaded = true;
+//    if(scroll){
+//         pageThree();
+//     //change page 1 y values;
+//           pgy[2] += -delta
+//           pgy[3] += -delta
+//           timer++;
+          
+//         if(pgy[3] <= 0){
+//          // pgy[2]=0;
+//           page = 3;
+//           scroll = false;
+//           pg2Loaded = false;
+//           } 
+      
+//          }
+//     pageTwo();
+//   }
+//   if(page===3){
+//     pgy[3]=0;
+//     pageThree();
+//   }
 
     }
 
@@ -109,7 +145,7 @@ function windowResized() {
 
 function mouseWheel(event) {
  // print(event.delta);
-  let delta = event.delta;
+  delta = event.delta;
   if(delta>0){
     //scroll down to next page
     //pg0.scrollNext(0,0,-height,2000);

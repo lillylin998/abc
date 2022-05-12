@@ -14,24 +14,24 @@
         "[ immediately upon seeing me ] Ni hao!/Konnichiwa!",
         "...and more!"],
         "img": null,
-        "offsetx": -220,
-        "offsety": -150,
+        "offsetx": 220,
+        "offsety": 800,
         "width": 200,
         "height": 400
     },
     {
         "txt": ["The 'oriental marts', aka the only places my mom could source Asian groceries"],
         "img": null,
-        "offsetx": -200,
-        "offsety": 0,
+        "offsetx": 0,
+        "offsety": 1040,
         "width": 200,
         "height": 60
     },
     {
         "txt": ["Private lessons from one of the very few family friends in the area - but I still communicated with them in English"],
         "img": null,
-        "offsetx": -220,
-        "offsety": 50,
+        "offsetx":-100,
+        "offsety": 1050,
         "width": 200,
         "height": 80
     },
@@ -39,8 +39,8 @@
         "txt": ["We only went some years, and again, I don't remember much.",
             "Who was there? Why did we only go some years? Why did we stop going? Where was it? How many people where there? I only remember seeing lion dancing there for the first time and thinking that was pretty cool."],
         "img": null,
-        "offsetx": -220,
-        "offsety": 50,
+        "offsetx": -500,
+        "offsety": 1050,
         "width": 200,
         "height": 160
     },
@@ -48,28 +48,28 @@
         "txt": ["Chinese schools are exactly what they sound like - schools established outside of China to teach Chinese language and culture to school-aged children. These schools are separate from your regular Monday to Friday schooling, meaning we would attend one day a week on the weekend.",
         "Ironically, sticking to attending probably would have helped me with my Chinese language skills and therefore possibly would have relieved me of some of the cultural anxiety I experienced later in my life. Also, funnily enough, essentially everybody I've talked to in my life who also went to Chinese school recalls greatly disliking it."],
         "img": null,
-        "offsetx": -280,
-        "offsety": -250,
+        "offsetx": -230,
+        "offsety": 920,
         "width": 200,
-        "height": 320
+        "height": 340
     },
     {
         "txt": ["The qipao/cheongsam is a tight-fitting, usually longer style of dress. It was the closest thing I had when I was growing up that I could reference as a 'traditional' cultural Chinese garment - although it was actually only inspired by traditional garments. It was actually created in the 1920's, popularized by socialite women in Shanghai.",
             "It's a beautiful style of dress, how could I have ever hated it? My qipao, like most of the other things I mentioned I hated about myself at the time, simply just brought too much attention to the fact that I was so culturally different from my peers. I often felt that I'd attract stares (not in a good way), and I always felt strange and out of place when wearing it."],
-        "img": null,
-        "offsetx": 80,
-        "offsety": -560,
-        "width": 200,
-        "height": 590
+        "img": "/images/qipao.png",
+        "offsetx": 200,
+        "offsety": 610,
+        "width": 330,
+        "height": 650
     },
     {
         "txt": ["The tangzhuang or Tang suit is a style jacket modeled after jackets that were worn by Manchu horsemen. Despite the name, they don't originate from the Tang Dynasty. It is most often seen in menswear, but is a unisex piece.",
         "The one that I wore as a kid was light blue with a delicate floral pattern and came with matching pants. I didn't like wearing it as a kid for the same reason that I didn't like wearing my qipao, but now I have both styles of clothing in my closet (in adult size) that I truly cherish."],
-        "img": null,
-        "offsetx": 40,
-        "offsety": -560,
-        "width": 200,
-        "height": 500
+        "img": "/images/tangsuit.png",
+        "offsetx": 100,
+        "offsety": 610,
+        "width": 330,
+        "height": 550
     },
    {
         "txt": ["My parents gave me an English name (Lilly) at birth assumedly because they knew they would raise me in the U.S. and therefore I would assimilate easier with an English name. So my middle name is my 'real' Chinese name.",

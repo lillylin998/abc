@@ -3,10 +3,10 @@
         {
             "txt":["I do think I can be a bit harsh on myself about my level of Chinese. I can communicate just fine with my family, I can order food and speak politely to strangers in spoken Chinese, but beyond that I have a pretty limited vocabulary and very limited knowledge of more colloquial terms"],
             "img": null,
-            "offsetx": 500,
-            "offsety": 150,
+            "offsetx": -50,
+            "offsety": 2000,
             "width": 200,
-            "height": 100
+            "height": 170
         }
     ]
 }

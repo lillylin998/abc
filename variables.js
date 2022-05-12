@@ -1,4 +1,4 @@
-let page = 2;
+let page = 3;
 let inconsolata_Reg, inconsolata_SE_ExtraLight, inconsolata_SE_Light, inconsolata_Light, inconsolata_ExtraLight;
 let libreBaskerville_italic;
 let nunito_Light, nunito_LightItalic;
@@ -13,6 +13,12 @@ let timer = 0;
 let testdraw = false;
 let page1p = [];
 let page2p = [];
+let page3p = [];
+let page4p = [];
+let page5p = [];
+let page6p = [];
+let page7p = [];
+
 let page1popups = [];
 let page2popups = [];
 let page3popups = [];

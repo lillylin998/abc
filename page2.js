@@ -21,7 +21,7 @@ function pageTwo(){
         page2p[1].style('text-align','justify')
         page2p[1].style('line-height',1.2);
         page2p[1].style('font-size','20px');
-        page2p[1].style('color','white');
+        //page2p[1].style('color','white');
        // page2p[1].style('clip-path','polygon(0 0, 16% 8%, 31% 16%, 45% 27%, 55% 40%, 64% 55%, 74% 64%, 88% 70%, 100% 69%, 100% 100%, 0 100%)');
         //second "I am asian after all"
         // page2p[2].show();
@@ -49,7 +49,7 @@ function pageTwo(){
         page2p[4].style('font-size','20px');
 
     }
-  loadText();
+  //loadText();
     for(let i in page2popups){
         page2popups[i].el.onmouseover = function(){
         page2popups[i].switch();
