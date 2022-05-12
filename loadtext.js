@@ -1,6 +1,9 @@
-function loadText(){ //pull all div elements and what page they're assigned to?
-    if(!pg1Loaded){ //if the text hasnt been loaded already, pull all the b elements from the page
-        let tags = Array.from(document.getElementsByTagName('span'));
+function loadText(){
+     //pull all div elements and what page they're assigned to?
+     if(page==1){
+       
+     if(!pg1Loaded){ //if the text hasnt been loaded already, pull all the b elements from the page
+        let tags = Array.from(document.getElementsByClassName('page1'));
         print(tags)
         //make a pop up object for all of these 
         for(let i in tags){
@@ -8,13 +11,29 @@ function loadText(){ //pull all div elements and what page they're assigned to?
            page1popups.push(new PopUp(index.txt,tags[i].id,index.img,index.offsetx,index.offsety,index.width,index.height )); 
            //set pop up x and y 
            page1popups[i].set();
-
+ 
         }
         //let index = tags[0].id
        // print(pg1_popuptext.popupdata[0].txt);
        // print(page1popups);
-        pg1Loaded=true;
+       pg1Loaded=true;
+     }
+  }
+  if(page==2){
+    if(!pg2Loaded){ //if the text hasnt been loaded already, pull all the b elements from the page
+        let tags = Array.from(document.getElementsByClassName('page2'));
+        print(tags)
+        //make a pop up object for all of these 
+        for(let i in tags){
+            let index = pg2_popuptext.popupdata[i];
+           page2popups.push(new PopUp(index.txt,tags[i].id,index.img,index.offsetx,index.offsety,index.width,index.height )); 
+           //set pop up x and y 
+           page2popups[i].set();
+           print(page2popups)
+        }
+        pg2Loaded=true;
     }
+  }
 }
 
 

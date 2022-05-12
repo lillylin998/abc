@@ -1,0 +1,45 @@
+{
+    "popupdata": [
+        {
+            "txt":["spoiler alert: this never happened"],
+            "img": null,
+            "offsetx": 500,
+            "offsety": 150,
+            "width": 200,
+            "height": 100
+        },
+        {
+            "txt":["shoutout to snapchat for finally allowing its users to change their usernames - 'asianp3rsuasi0n' was about to haunt me to the afterlife"],
+            "img": null,
+            "offsetx": 500,
+            "offsety": 150,
+            "width": 200,
+            "height": 100
+
+        },
+        {
+            "txt":["The model minority myth is essentially this notion that Asians are innately high achieving, despite being a minority. It is rooted in stereotypes, and can be confusing because how can 'positive' stereotypes (i.e., being high achieving), be bad?"],
+            "img": null,
+            "offsetx": 500,
+            "offsety": 150,
+            "width": 200,
+            "height": 100
+        },
+        {
+            "txt":["Historical events such as Chinese immigrants working on the nation's first railroads, and the Chinese Exclusion Act were very briefly covered when I studied U.S. history in high school, but never on a much deeper level than the fact that they happened. I even had a classmate tell me once that 'it was ok' because 'Asians are so successful now'."],
+            "img": null,
+            "offsetx": 500,
+            "offsety": 150,
+            "width": 200,
+            "height": 100
+        },   
+         {
+            "txt":["Whew there's a lot to unpack here. The model minority myth perpetuates the idea that there is a certain way people of color are meant to 'succeed'. It is used to drive a wedge between minority groups, it disregards diversity amongst Asians, and it erases our history. There's a lot more to say on this, and this essay isn't about the model minority myth, but feel free to read more about it at https://www.learningforjustice.org/magazine/what-is-the-model-minority-myth"],
+            "img": null,
+            "offsetx": 500,
+            "offsety": 150,
+            "width": 200,
+            "height": 100
+        }
+    ]
+}

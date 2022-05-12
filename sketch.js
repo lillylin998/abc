@@ -10,16 +10,14 @@ function preload(){
   page1str = loadStrings('/text/page1.txt');
   page2str = loadStrings('/text/page2.txt');
   pg1_popuptext = loadJSON('/text/page1_popups.json');
+  pg2_popuptext = loadJSON('/text/page2_popups.json');
   
 }
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
   frameRate(30);
-  //taking OUT the graphics
-  // pg0 = new Page(0);
-  // //currently working on page 1 ONLY, change to height later
-  // pg1 = new Page(0);
+
   rectMode(CENTER)
   pg1y=height;
   var y = 0;
@@ -27,7 +25,7 @@ function setup() {
     pgy.push(y);
     y+=height;
   }
-  //print(pg1y);
+
   a = new Letter('A',width/2-300,height-200,width/4);
   b = new Letter('B', width/2-100,height-250,width/4 );
   c = new Letter('C', width/2+100, height-150, width/4)
@@ -35,15 +33,16 @@ function setup() {
   particles.push(new Particle(random(50,width-50),random(height,height+100),random(10,40)));
   }
 
-  // bigDiv = createElement('span');
-  // bigDiv.style('float','left');
   for(let i in page1str){
     page1p.push(createElement('p',page1str[i]));
     page1p[i].hide();
     page1p[i].style('display','flex')
-   // page1p[i].parent(bigDiv);
   }
- // print(page1p);
+  for(let i in page2str){
+    page2p.push(createElement('p',page2str[i]));
+    page2p[i].hide();
+    page2p[i].style('display','flex')
+  }
 }
 
 function draw() {
@@ -66,7 +65,7 @@ background(220);
      titlepage();
     } 
 if(page===1){
-  pg1Loaded = true;
+ // pg1Loaded = true;
   if(scroll){
      
     //change page 1 y values;
@@ -77,7 +76,7 @@ if(page===1){
         if(pgy[2] <= 0){
           page = 2;
           scroll = false;
-          pg1Loaded = false;
+         // pg1Loaded = false;
           } 
           pageTwo();
          }

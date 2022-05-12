@@ -12,8 +12,11 @@ let scroll = false;
 let timer = 0;
 let testdraw = false;
 let page1p = [];
+let page2p = [];
 let page1popups = [];
+let page2popups = [];
 let pg1_popuptext;
+let pg2_popuptext;
 
 
 let p0x,pg1x,pg2x,pg3x,pg4x,pg5x,pg6x,pg7x=0;

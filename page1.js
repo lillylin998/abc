@@ -23,7 +23,7 @@ function pageOne(){
       text(page1str[3],textW_me, textH+height/5+250);
       text(page1str[5],textW_me, textH+height/5+425);
   
-      if(pg1Loaded){
+      if(pgy[1]<=0){
       //next few lines are the start of the actual essay
       //pg1.pg.textFont(inconsolata_Light)
       textAlign(LEFT);

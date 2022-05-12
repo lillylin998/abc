@@ -1,0 +1,36 @@
+{
+    "popupdata": [
+        {
+            "txt":["Typically white, upper middle class architects. Some examples: Charles Beasley and his son William, A.A. Cantin, Crim & Scorr, Meyers & Ward, Hamilton Murdock, T. Paterson Ross & A.W. Burgen, Rousseau and Charles Soule (Quan, 1994)"],
+            "img": null,
+            "offsetx": 500,
+            "offsety": 150,
+            "width": 200,
+            "height": 100
+        },
+        {
+            "txt":["Despite the fact that most Chinese immigrants residing in Chinatown were likely from rural, southern Chinese districts"],
+            "img": null,
+            "offsetx": 500,
+            "offsety": 150,
+            "width": 200,
+            "height": 100
+        },
+        {
+            "txt":["The people around me held stereotypes based on the visual representation precedent set in media. According to the quips and jokes I was told growing up, Chinese people and culture are: chopsticks, rice, noodles, speaking with a funny accent, lanterns, dragons, kungfu, woks, fortune cookies"],
+            "img": null,
+            "offsetx": 500,
+            "offsety": 150,
+            "width": 200,
+            "height": 100
+        },
+        {
+            "txt":["jǔ mù wú qīn. Meaning: Be a stranger in a foreign land/not having anyone to rely on. Literal meaning: To raise your eyes and see no loved ones/no one familiar"],
+            "img": null,
+            "offsetx": 500,
+            "offsety": 150,
+            "width": 200,
+            "height": 100
+        }
+    ]
+}

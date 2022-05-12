@@ -1,0 +1,20 @@
+{
+    "popupdata": [
+        {
+            "txt":["What I mean by this is most statements about Asian culture or Chinese culture were blanket statements. 'Asians are good at __', 'Asians look like __', 'Chinese food is __'. These blanks were filled in with pretty generic information, usually based on stereotypes."],
+            "img": null,
+            "offsetx": 500,
+            "offsety": 150,
+            "width": 200,
+            "height": 100
+        },
+        {
+            "txt":["The strokes in Chop Suey font glyphs are meant to imitate the brush strokes of Chinese calligraphy characters. Chinese calligraphic strokes can be generally categorized into 8 different types: heng, dian, pie, na, shu, you, wan, and ti. Chop Suey fonts only utilize ti and na strokes, and therefore doesn’t capture the full likeness of Chinese calligraphy characters"],
+            "img": null,
+            "offsetx": 500,
+            "offsety": 150,
+            "width": 200,
+            "height": 100
+        }
+    ]
+}

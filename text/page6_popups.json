@@ -1,0 +1,20 @@
+{
+    "popupdata": [
+        {
+            "txt":["(Wachendorff, 2018) and (Featherstone & Lash, 1999)"],
+            "img": null,
+            "offsetx": 500,
+            "offsety": 150,
+            "width": 200,
+            "height": 100
+        },
+        {
+            "txt":[" (Lippmann 1997, 100)"],
+            "img": null,
+            "offsetx": 500,
+            "offsety": 150,
+            "width": 200,
+            "height": 100
+        }
+    ]
+}
