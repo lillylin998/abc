@@ -1,5 +1,10 @@
 function pageTwo(){
     push();
+    for(let i in page2p){
+        page2p[i].hide();
+    }
+         
+  
     if(pg2Loaded){
         //first paragraph
         page2p[0].show();
@@ -44,7 +49,7 @@ function pageTwo(){
         page2p[4].style('font-size','20px');
 
     }
-    loadText();
+  loadText();
     for(let i in page2popups){
         page2popups[i].el.onmouseover = function(){
         page2popups[i].switch();

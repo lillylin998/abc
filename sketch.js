@@ -65,7 +65,7 @@ background(220);
       pgy[0] += scrollOut(timer,0,-height,600)
       pgy[1] += scrollOut(timer,0,-height,600)
       timer++;
-      print(pg1y);
+      
     if(pgy[1] <= 0){
       page = 1;
       scroll = false;
@@ -82,20 +82,21 @@ if(page===1){
           pgy[1] += scrollOut(timer,0,-height,600)
           pgy[2] += scrollOut(timer,0,-height,600)
           timer++;
-         
+          
         if(pgy[2] <= 0){
+         // pgy[2]=0;
           page = 2;
           scroll = false;
          // pg1Loaded = false;
           } 
-          pageTwo();
+         pageTwo();
          }
     pageOne();
   }
 
   if(page===2){
-    
-    pg2Loaded = true;
+    pgy[2]=0;
+   // pg2Loaded = true;
     pageTwo();
   }
 
