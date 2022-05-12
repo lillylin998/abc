@@ -74,9 +74,9 @@
    {
         "txt": ["My parents gave me an English name (Lilly) at birth assumedly because they knew they would raise me in the U.S. and therefore I would assimilate easier with an English name. So my middle name is my 'real' Chinese name.",
             "To clarify, of course I don't expect non-Chinese speakers to immediately get the pronunciation, and I'm always happy to say it a few times for reference. The reason I hated doing it so much was because people often continued mispronouncing it,  purposefully mispronounced it, or followed up immediately with something like, 'That's so hard, it's such a weird name'. I've also been referred to by my peers as Lilly 'whatever your middle name is' Lin. Because my middle name IS my Chinese name, yeah those comments definitely hurt."],
-        "img": null,
-        "offsetx": 20,
-        "offsety": -560,
+        "img": "/images/name.png",
+        "offsetx": 700,
+        "offsety": 600,
         "width": 300,
         "height": 520
     }

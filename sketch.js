@@ -22,6 +22,8 @@ function preload(){
   pg5_popuptext = loadJSON('/text/page5_popups.json');
   pg6_popuptext = loadJSON('/text/page6_popups.json');
   pg7_popuptext = loadJSON('/text/page7_popups.json');
+  chopsuey_eng = loadImage('/images/chopsuey_eng.png');
+  chopsuey_chn = loadImage('/images/chopsuey_chn.png');
   
 }
 
@@ -40,9 +42,12 @@ function setup() {
   a = new Letter('A',width/2-300,pgy[0]+600,width/4);
   b = new Letter('B', width/2-100,pgy[0]+550,width/4 );
   c = new Letter('C', width/2+100, pgy[0]+520, width/4)
-  for(let i=0; i<10; i++){
-  particles.push(new Particle(random(50,width-50),random(pgy[0]+windowHeight,pgy[0]+windowHeight+100),random(10,40)));
+  for(let i=0; i<40; i++){
+  particles.push(new Particle(random(50,width-50),random(pgy[0]+windowHeight,pgy[6]),random(10,40)));
   }
+  for(let i=0; i<10; i++){
+    particles.push(new Particle(random(50,width-50),random(pgy[0]+windowHeight,pgy[1]),random(10,40)));
+    }
 
   for(let i in page1str){
     page1p.push(createElement('p',page1str[i]));
@@ -64,6 +69,22 @@ function setup() {
     page4p[i].hide();
     page4p[i].style('display','flex')
   }
+  for(let i in page5str){
+    page5p.push(createElement('p',page5str[i]));
+    page5p[i].hide();
+    page5p[i].style('display','block')
+  }
+  for(let i in page6str){
+    page6p.push(createElement('p',page6str[i]));
+    page6p[i].hide();
+    page6p[i].style('display','block')
+  }
+  for(let i in page7str){
+    page7p.push(createElement('p',page7str[i]));
+    page7p[i].hide();
+    page7p[i].style('display','block')
+  }
+  print(page5p)
   loadText();
 }
 
@@ -74,6 +95,9 @@ pageOne();
 pageTwo();
 pageThree();
 pageFour();
+pageFive();
+pageSix();
+pageSeven();
 //   if(page===0){
     
 //     if(scroll){

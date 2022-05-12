@@ -3,6 +3,10 @@ let inconsolata_Reg, inconsolata_SE_ExtraLight, inconsolata_SE_Light, inconsolat
 let libreBaskerville_italic;
 let nunito_Light, nunito_LightItalic;
 
+//images
+let chopsuey_eng;
+let chopsuey_chn;
+
 
 let particles = [];
 let a;
