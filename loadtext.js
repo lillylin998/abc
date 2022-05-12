@@ -13,9 +13,6 @@ function loadText(){
            page1popups[i].set();
  
         }
-        //let index = tags[0].id
-       // print(pg1_popuptext.popupdata[0].txt);
-       // print(page1popups);
        pg1Loaded=true;
      }
   }
@@ -32,6 +29,81 @@ function loadText(){
            print(page2popups)
         }
         pg2Loaded=true;
+    }
+  }
+  if(page==3){
+    if(!pg3Loaded){ //if the text hasnt been loaded already, pull all the b elements from the page
+        let tags = Array.from(document.getElementsByClassName('page3'));
+        print(tags)
+        //make a pop up object for all of these 
+        for(let i in tags){
+            let index = pg3_popuptext.popupdata[i];
+           page3popups.push(new PopUp(index.txt,tags[i].id,index.img,index.offsetx,index.offsety,index.width,index.height )); 
+           //set pop up x and y 
+           page3popups[i].set();
+           print(page3popups)
+        }
+        pg3Loaded=true;
+    }
+  }
+  if(page==4){
+    if(!pg4Loaded){ //if the text hasnt been loaded already, pull all the b elements from the page
+        let tags = Array.from(document.getElementsByClassName('page4'));
+        print(tags)
+        //make a pop up object for all of these 
+        for(let i in tags){
+            let index = pg4_popuptext.popupdata[i];
+           page4popups.push(new PopUp(index.txt,tags[i].id,index.img,index.offsetx,index.offsety,index.width,index.height )); 
+           //set pop up x and y 
+           page4popups[i].set();
+           print(page4popups)
+        }
+        pg4Loaded=true;
+    }
+  }
+  if(page==5){
+    if(!pg5Loaded){ //if the text hasnt been loaded already, pull all the b elements from the page
+        let tags = Array.from(document.getElementsByClassName('page5'));
+        print(tags)
+        //make a pop up object for all of these 
+        for(let i in tags){
+            let index = pg5_popuptext.popupdata[i];
+           page5popups.push(new PopUp(index.txt,tags[i].id,index.img,index.offsetx,index.offsety,index.width,index.height )); 
+           //set pop up x and y 
+           page5popups[i].set();
+           print(page5popups)
+        }
+        pg5Loaded=true;
+    }
+  }
+  if(page==6){
+    if(!pg6Loaded){ //if the text hasnt been loaded already, pull all the b elements from the page
+        let tags = Array.from(document.getElementsByClassName('page6'));
+        print(tags)
+        //make a pop up object for all of these 
+        for(let i in tags){
+            let index = pg6_popuptext.popupdata[i];
+           page6popups.push(new PopUp(index.txt,tags[i].id,index.img,index.offsetx,index.offsety,index.width,index.height )); 
+           //set pop up x and y 
+           page6popups[i].set();
+           print(page6popups)
+        }
+        pg6Loaded=true;
+    }
+  }
+  if(page==7){
+    if(!pg7Loaded){ //if the text hasnt been loaded already, pull all the b elements from the page
+        let tags = Array.from(document.getElementsByClassName('page7'));
+        print(tags)
+        //make a pop up object for all of these 
+        for(let i in tags){
+            let index = pg7_popuptext.popupdata[i];
+           page7popups.push(new PopUp(index.txt,tags[i].id,index.img,index.offsetx,index.offsety,index.width,index.height )); 
+           //set pop up x and y 
+           page7popups[i].set();
+           print(page7popups)
+        }
+        pg7Loaded=true;
     }
   }
 }

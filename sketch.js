@@ -9,8 +9,18 @@ function preload(){
   page0str = loadStrings('/text/page0.txt');
   page1str = loadStrings('/text/page1.txt');
   page2str = loadStrings('/text/page2.txt');
+  page3str = loadStrings('/text/page3.txt');
+  page4str = loadStrings('/text/page4.txt');
+  page5str = loadStrings('/text/page5.txt');
+  page6str = loadStrings('/text/page6.txt');
+  page7str = loadStrings('/text/page7.txt');
   pg1_popuptext = loadJSON('/text/page1_popups.json');
   pg2_popuptext = loadJSON('/text/page2_popups.json');
+  pg3_popuptext = loadJSON('/text/page3_popups.json');
+  pg4_popuptext = loadJSON('/text/page4_popups.json');
+  pg5_popuptext = loadJSON('/text/page5_popups.json');
+  pg6_popuptext = loadJSON('/text/page6_popups.json');
+  pg7_popuptext = loadJSON('/text/page7_popups.json');
   
 }
 
@@ -19,7 +29,7 @@ function setup() {
   frameRate(30);
 
   rectMode(CENTER)
-  pg1y=height;
+  //pg1y=height;
   var y = 0;
   for(let i =0; i<8; i++){
     pgy.push(y);

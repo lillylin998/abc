@@ -6,7 +6,7 @@ let nunito_Light, nunito_LightItalic;
 
 let particles = [];
 let a;
-let page0str,page1str,page2str = [];
+let page0str,page1str,page2str,page3str,page4str,page5str,page6str,page7str = [];
 
 let scroll = false;
 let timer = 0;
@@ -15,8 +15,18 @@ let page1p = [];
 let page2p = [];
 let page1popups = [];
 let page2popups = [];
+let page3popups = [];
+let page4popups = [];
+let page5popups = [];
+let page6popups = [];
+let page7popups = [];
 let pg1_popuptext;
 let pg2_popuptext;
+let pg3_popuptext;
+let pg4_popuptext;
+let pg5_popuptext;
+let pg6_popuptext;
+let pg7_popuptext;
 
 
 let p0x,pg1x,pg2x,pg3x,pg4x,pg5x,pg6x,pg7x=0;
