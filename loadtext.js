@@ -1,5 +1,5 @@
 function loadText(){ //pull all div elements and what page they're assigned to?
-    if(!pageLoaded){ //if the text hasnt been loaded already, pull all the b elements from the page
+    if(!pg1Loaded){ //if the text hasnt been loaded already, pull all the b elements from the page
         let tags = Array.from(document.getElementsByTagName('span'));
         print(tags)
         //make a pop up object for all of these 
@@ -12,8 +12,8 @@ function loadText(){ //pull all div elements and what page they're assigned to?
         }
         //let index = tags[0].id
        // print(pg1_popuptext.popupdata[0].txt);
-        print(page1popups);
-        pageLoaded=true;
+       // print(page1popups);
+        pg1Loaded=true;
     }
 }
 
@@ -67,10 +67,10 @@ class PopUp{
             print('hello')
         }
         this.popup.show();
-        pg1.pg.push();
-        pg1.pg.stroke(0,0,255);
-        pg1.pg.line(this.x+this.offsetx,this.y+this.offsety,mouseX,mouseY);
-        pg1.pg.pop();
+        push();
+        stroke(0,0,255);
+        line(this.x+this.offsetx,this.y+this.offsety,mouseX,mouseY);
+        pop();
         print('x ' + mouseX);
         print('y ' +mouseY);
         } else {

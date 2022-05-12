@@ -1,5 +1,4 @@
 
-
 function preload(){
   //need to change font paths to add abc/ before final push
   inconsolata_Reg = loadFont('/fonts/Inconsolata-Regular.ttf');
@@ -9,6 +8,7 @@ function preload(){
   nunito_LightItalic = loadFont('/fonts/Nunito-LightItalic.ttf');
   page0str = loadStrings('/text/page0.txt');
   page1str = loadStrings('/text/page1.txt');
+  page2str = loadStrings('/text/page2.txt');
   pg1_popuptext = loadJSON('/text/page1_popups.json');
   
 }
@@ -16,10 +16,18 @@ function preload(){
 function setup() {
   createCanvas(windowWidth, windowHeight);
   frameRate(30);
-  pg0 = new Page(0);
-  //currently working on page 1 ONLY, change to height later
-  pg1 = new Page(0);
+  //taking OUT the graphics
+  // pg0 = new Page(0);
+  // //currently working on page 1 ONLY, change to height later
+  // pg1 = new Page(0);
   rectMode(CENTER)
+  pg1y=height;
+  var y = 0;
+  for(let i =0; i<8; i++){
+    pgy.push(y);
+    y+=height;
+  }
+  //print(pg1y);
   a = new Letter('A',width/2-300,height-200,width/4);
   b = new Letter('B', width/2-100,height-250,width/4 );
   c = new Letter('C', width/2+100, height-150, width/4)
@@ -35,28 +43,51 @@ function setup() {
     page1p[i].style('display','flex')
    // page1p[i].parent(bigDiv);
   }
-  print(page1p);
+ // print(page1p);
 }
 
 function draw() {
-//background(0);
+background(220);
   if(page===0){
-    titlepage();
+    
     if(scroll){
-      pageOne();
-
-      pg0.y += scrollOut(pg0,timer,0,-height,600)
-      pg1.y += scrollOut(pg1,timer,0,-height,600)
+     
+//change page 1 y values;
+      pgy[0] += scrollOut(timer,0,-height,600)
+      pgy[1] += scrollOut(timer,0,-height,600)
       timer++;
-
-    if(pg1.y <= 0){
+      print(pg1y);
+    if(pgy[1] <= 0){
       page = 1;
       scroll = false;
-      }
+      } 
+      pageOne();
      }
+     titlepage();
     } 
 if(page===1){
+  pg1Loaded = true;
+  if(scroll){
+     
+    //change page 1 y values;
+          pgy[1] += scrollOut(timer,0,-height,600)
+          pgy[2] += scrollOut(timer,0,-height,600)
+          timer++;
+         
+        if(pgy[2] <= 0){
+          page = 2;
+          scroll = false;
+          pg1Loaded = false;
+          } 
+          pageTwo();
+         }
     pageOne();
+  }
+
+  if(page===2){
+    
+    pg2Loaded = true;
+    pageTwo();
   }
 
     }
@@ -67,7 +98,7 @@ function windowResized() {
 }
 
 function mouseWheel(event) {
-  print(event.delta);
+ // print(event.delta);
   let delta = event.delta;
   if(delta>0){
     //scroll down to next page
@@ -83,7 +114,7 @@ function mouseWheel(event) {
 //   let b = 0; //beginning value of property (position y = 0)
 //   let c = -height; // change between beg and destination value of property 
 //   let d = 2000; //total time of tween (2 seconds);
-function scrollOut(pageNo,t,b,c,d){
+function scrollOut(t,b,c,d){
   //pageNext = pageNo+1;
   
   
@@ -129,15 +160,17 @@ class Letter{
 
   }
   display(){
-    pg0.pg.fill(0);
-    pg0.pg.textSize(this.size);
-    pg0.pg.text(this.str,this.x,this.y-50);
+    fill(0);
+    textSize(this.size);
+    text(this.str,this.x,pgy[0]+this.y-50);
   }
   vertFloat(){
+    if(!scroll){ //if you are NOT scrolling
     this.y += this.vy;
     if(this.y <= this.ymin || this.y >= this.ymax ){
       this.vy = -this.vy;
     }
+  }
   }
 }
 
@@ -152,9 +185,9 @@ class Particle{
 
   display(){
     push();
-    pg0.pg.noStroke();
-    pg0.pg.fill(0,0,0,this.a)
-    pg0.pg.ellipse(this.x,this.y,this.size);
+    noStroke();
+    fill(0,0,0,this.a)
+    ellipse(this.x,pgy[0]+this.y,this.size);
    pop();
     this.y -=this.vy;
     if(this.y <= 0-this.size){

@@ -1,6 +1,6 @@
 //abc on grey background with description text
 function titlepage(){
-    pg0.pg.background(220);
+   // background(220);
     a.display();
     a.vertFloat();
     b.display();
@@ -10,20 +10,20 @@ function titlepage(){
     for(let i in particles){
       particles[i].display();
     }
-    pg0.pg.push();
+    push();
     //rectMode(CORNER);
     let combinedh = 0;
-    let texty = pg0.y+100;
-    pg0.pg.textWrap(WORD);
-    pg0.pg.rectMode(CENTER);
-    pg0.pg.textAlign(CENTER);
-    pg0.pg.textSize(width/70);
-    pg0.pg.textFont(inconsolata_Reg);
-    pg0.pg.fill(0);
-    pg0.pg.text(page0str[0],width/2,texty,740);
-    pg0.pg.textSize(width/80);
-    pg0.pg.text(page0str[1],width/2,height/1.2,width/2);
-    pg0.pg.text(page0str[2],width/2,height/1.1,width/2);
+    let texty = pgy[0]+100;
+    textWrap(WORD);
+    rectMode(CENTER);
+    textAlign(CENTER);
+    textSize(width/70);
+    textFont(inconsolata_Reg);
+    fill(0);
+    text(page0str[0],width/2,texty,740);
+    textSize(width/80);
+    text(page0str[1],width/2,texty+530,width/2);
+    text(page0str[2],width/2,texty+620,width/2);
     // let paraBreak = 20;
     // let texth=textHeight(page0str[0],400);
     // texty+=texth;
@@ -42,7 +42,7 @@ function titlepage(){
     //   text(page0str[i],50,100+combinedh,450); 
     //   combinedh += h;
     // }
-    pg0.pg.pop();
+    pop();
     //image(pg0,0,0);
-    pg0.display();
+    //pg0.display();
   }

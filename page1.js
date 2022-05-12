@@ -1,33 +1,37 @@
 
 //introduction
 function pageOne(){
-    pg1.pg.background(220);
+     // background(220);
+      push();
       //first 5 lines is where are you from conversation 
-      let textH = height/5;
+      let textH = pgy[1];
+      //print(pg1y+height/5)
       //let textW_other = width/3;
-      let textW_other = width/15;
+      let textW_other = width/5.5;
       //let textW_me = width/1.5;
       let textW_me = width/2.5;
-      pg1.pg.textWrap(WORD);
-      pg1.pg.fill(0);
-      pg1.pg.textFont(inconsolata_Reg);
-      pg1.pg.textSize(30);
-      pg1.pg.text(page1str[0], textW_other, textH,400);
-      pg1.pg.text(page1str[2],textW_other,textH+150,400);
-      pg1.pg.text(page1str[4],textW_other, textH+325,400);
-      pg1.pg.textAlign(RIGHT);
-      pg1.pg.text(page1str[1],textW_me, textH+75);
-      pg1.pg.text(page1str[3],textW_me, textH+250);
-      pg1.pg.text(page1str[5],textW_me, textH+425);
+      textWrap(WORD);
+      textAlign(LEFT);
+      fill(0);
+      textFont(inconsolata_Reg);
+      textSize(30);
+      text(page1str[0], textW_other, textH+height/5,400);
+      text(page1str[2],textW_other,textH+height/5+150,400);
+      text(page1str[4],textW_other, textH+height/5+325,400);
+      textAlign(RIGHT);
+      text(page1str[1],textW_me, textH+height/5+75);
+      text(page1str[3],textW_me, textH+height/5+250);
+      text(page1str[5],textW_me, textH+height/5+425);
   
+      if(pg1Loaded){
       //next few lines are the start of the actual essay
       //pg1.pg.textFont(inconsolata_Light)
-      pg1.pg.textAlign(LEFT);
-      pg1.pg.textSize(16);
+      textAlign(LEFT);
+      textSize(16);
       //let paraW_Left = width/18;
       let paraW_Left = width/2;
       //let paraW_Right = width/1.42;
-      let paraH = height/10;
+      let paraH = pgy[1]+height/10;
       let parbreak = height/40;
   
     
@@ -82,7 +86,13 @@ function pageOne(){
     page1popups[i].display();
 
     }
-     pg1.display();
+  }else{
+    for(let i=0;i<page1p.length;i++){
+      page1p[i].hide();
+  }
+  }
+  pop();
+    // pg1.display();
    
    
     //pg1a.rect(0,0,height/2,50,50);
